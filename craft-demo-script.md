@@ -164,3 +164,20 @@ Now let's go through how we converted this static template to Craft.
 - `{% set image = entry.image.first() %}` just sets a variable to the first image in this entries `image` field. The `.first()` is necessary because entries can have multiple assets uploaded to one field, we just happened to limit to 1 in this case.
 - Next, in the `<img src=""…` we added `{{ image.getUrl('homepageFeatured') }}`. This code is a little more complicated than the most basic case, because we're requesting a transformed image. If Craft hasn't already generated and cached this transformed image, it will do so the first time it is requested.
 - Now if we visit our [homepage](http://dev.craft-demo.com/), we can see that everything works great.
+
+## 05: Building out the portfolio entries.
+
+Now we're going to see how to build out and loop through these portfolio items.
+
+### Adding the Portfolio fields and section
+
+- First, we created a new field group called _Portfolio_, and added the following fields to it:
+	- `portfolioImages`: Any number of image assets
+- Then we went into [Settings > Sections](http://dev.craft-demo.com/index.php/admin/settings/sections) and created a new Portfolio section with the type _Channel_ and the default slugs and templates.
+- Then we edited the only Portfolio entry type and added our `portfolioImages` field, and also the `body` field from General to use as a description.
+- I created a few portfolio entries to work with.
+- Then I went into `/craft/templates/index.html` and add a loop to output all projects.
+- We can use `{{ entry.url }}` to automatically output the full URL path to this entry.
+- Next we need an index and entry template for the Portfolio. For the entry template I just created a simple two-column layout for now.
+- For the index, I added a portfolio index link to `/templates/includes/header.html` and added some code to automatically set a current class based on the URL segment.
+- Then I adjusted the `/portfolio/index.html` template to output projects in exactly the same way we did in `index.html`

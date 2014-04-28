@@ -11,6 +11,7 @@
 return array(
 
   '*' => array(
+    'omitScriptNameInUrls' => true
   ),
 
   'craft-demo.com' => array(

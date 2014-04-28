@@ -24,10 +24,23 @@
     {% include "/includes/head_scripts_styles" %}
   </head>
   <body class="homepage">
-      {% block content %}
-        <h1>Nothing to see here.</h1>
-      {% endblock %}
+    {% include "/includes/header_open" %}
+    {% block header_content %}{% endblock %}
+    {% include "/includes/header_close" %}
+    
+    <!-- Main Wrapper -->
+    <div id="main-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="12u">
+            {% block content %}
+              <h1>Nothing to see here.</h1>
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
 
-      {% include "/includes/footer" %}
+    {% include "/includes/footer" %}
   </body>
 </html>

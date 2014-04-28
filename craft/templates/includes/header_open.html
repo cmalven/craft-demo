@@ -1,0 +1,27 @@
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="12u">
+      
+        <!-- Header -->
+          <section id="header">
+            
+            <!-- Logo -->
+              <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
+            
+            <!-- Nav -->
+              <nav id="nav">
+                <ul>
+                  <li {% if craft.request.firstSegment == '' %}class="current_page_item"{% endif %}><a href="{{ siteUrl }}">Home</a></li>
+                  <li {% if craft.request.firstSegment == 'portfolio' %}class="current_page_item"{% endif %}><a href="{{ url('portfolio') }}">Portfolio</a></li>
+                  <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                  <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                  <li><a href="no-sidebar.html">No Sidebar</a></li>
+                </ul>
+              </nav>
+
+          </section>
+
+      </div>
+    </div>

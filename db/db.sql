@@ -51,7 +51,7 @@ CREATE TABLE `craft_assetfiles` (
 
 LOCK TABLES `craft_assetfiles` WRITE;
 /*!40000 ALTER TABLE `craft_assetfiles` DISABLE KEYS */;
-INSERT INTO `craft_assetfiles` VALUES (9,1,1,'11-rustic-outdoor-ceremony-hay-bales.jpg','image',800,500,486777,'2014-04-28 20:43:53','2014-04-28 20:43:53','2014-04-28 20:43:53','ff369144-b581-4a2d-8271-6ed748ad7f7f'),(10,1,1,'pic01.jpg','image',1200,444,128601,'2014-04-28 20:44:48','2014-04-28 20:44:49','2014-04-28 20:44:49','8d9f2a1b-7453-4f5c-a257-a35a5f02c1bd');
+INSERT INTO `craft_assetfiles` VALUES (9,1,1,'11-rustic-outdoor-ceremony-hay-bales.jpg','image',800,500,486777,'2014-04-28 20:43:53','2014-04-28 20:43:53','2014-04-28 20:43:53','ff369144-b581-4a2d-8271-6ed748ad7f7f'),(10,1,1,'pic01.jpg','image',1200,444,128601,'2014-04-28 20:44:48','2014-04-28 20:44:49','2014-04-28 20:44:49','8d9f2a1b-7453-4f5c-a257-a35a5f02c1bd'),(11,1,1,'pic02.jpg','image',374,260,61715,'2014-04-28 21:02:06','2014-04-28 21:02:07','2014-04-28 21:02:07','650f4bc4-4bc9-4d5c-be47-79dc3f0c3ae5'),(12,1,1,'pic03.jpg','image',374,260,37548,'2014-04-28 21:02:07','2014-04-28 21:02:07','2014-04-28 21:02:07','ac083d9a-0e05-43ec-b0a0-a679e65900ce'),(13,1,1,'pic04.jpg','image',374,260,54811,'2014-04-28 21:02:07','2014-04-28 21:02:08','2014-04-28 21:02:08','93f4f48f-6717-49dc-a8a4-4b16d6ac54d9'),(14,1,1,'pic05.jpg','image',374,260,39967,'2014-04-28 21:02:08','2014-04-28 21:02:08','2014-04-28 21:02:08','8744fed2-6fb4-4a0a-9602-54e2d98f7475'),(15,1,1,'pic06.jpg','image',374,260,63946,'2014-04-28 21:02:08','2014-04-28 21:02:08','2014-04-28 21:02:08','d9925943-989a-4f84-981e-47ca523b2bc8'),(16,1,1,'pic07.jpg','image',374,260,54323,'2014-04-28 21:02:09','2014-04-28 21:02:09','2014-04-28 21:02:09','ac3f9c03-069c-4644-b89c-474962add6f3'),(17,1,1,'pic08.jpg','image',580,272,64064,'2014-04-28 21:02:09','2014-04-28 21:02:09','2014-04-28 21:02:09','3d65cdf9-2c6a-4dfc-8730-ce523537e4d8'),(18,1,1,'pic09.jpg','image',580,272,53148,'2014-04-28 21:02:09','2014-04-28 21:02:10','2014-04-28 21:02:10','b4176d45-ab29-4a05-8230-abf7b95ab54d'),(19,1,1,'pic10.jpg','image',374,167,26298,'2014-04-28 21:02:10','2014-04-28 21:02:10','2014-04-28 21:02:10','e87f37b8-3114-42c3-8d31-20701156123b');
 /*!40000 ALTER TABLE `craft_assetfiles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -178,7 +178,7 @@ CREATE TABLE `craft_assettransformindex` (
   `uid` char(36) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `craft_assettransformindex_sourceId_fileId_location_idx` (`sourceId`,`fileId`,`location`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -187,7 +187,7 @@ CREATE TABLE `craft_assettransformindex` (
 
 LOCK TABLES `craft_assettransformindex` WRITE;
 /*!40000 ALTER TABLE `craft_assettransformindex` DISABLE KEYS */;
-INSERT INTO `craft_assettransformindex` VALUES (2,9,'_homepageFeatured',1,1,0,'2014-04-28 20:43:58','2014-04-28 20:43:58','2014-04-28 20:43:59','7ad4aa4d-bb0c-4a7b-9df1-548ed752e0ac'),(3,10,'_homepageFeatured',1,1,0,'2014-04-28 20:45:07','2014-04-28 20:45:07','2014-04-28 20:45:08','1d2e96e0-6ee6-41f8-9557-f94ccb39c9ab');
+INSERT INTO `craft_assettransformindex` VALUES (2,9,'_homepageFeatured',1,1,0,'2014-04-28 20:43:58','2014-04-28 20:43:58','2014-04-28 20:43:59','7ad4aa4d-bb0c-4a7b-9df1-548ed752e0ac'),(3,10,'_homepageFeatured',1,1,0,'2014-04-28 20:45:07','2014-04-28 20:45:07','2014-04-28 20:45:08','1d2e96e0-6ee6-41f8-9557-f94ccb39c9ab'),(4,12,'_portfolioEntry',1,1,0,'2014-04-28 22:10:05','2014-04-28 22:10:05','2014-04-28 22:10:05','a5a638d4-2088-4d41-a1ba-255dd78d6c45'),(5,11,'_portfolioEntry',1,1,0,'2014-04-28 22:10:11','2014-04-28 22:10:11','2014-04-28 22:10:11','a614435b-7d5b-4ccd-b52e-8c5c48dee5d2'),(6,13,'_portfolioEntry',1,1,0,'2014-04-28 22:17:06','2014-04-28 22:17:06','2014-04-28 22:17:06','2666ee13-b0ff-490e-b7e3-6dd2cb4545a4');
 /*!40000 ALTER TABLE `craft_assettransformindex` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -214,7 +214,7 @@ CREATE TABLE `craft_assettransforms` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `craft_assettransforms_name_unq_idx` (`name`),
   UNIQUE KEY `craft_assettransforms_handle_unq_idx` (`handle`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -223,7 +223,7 @@ CREATE TABLE `craft_assettransforms` (
 
 LOCK TABLES `craft_assettransforms` WRITE;
 /*!40000 ALTER TABLE `craft_assettransforms` DISABLE KEYS */;
-INSERT INTO `craft_assettransforms` VALUES (1,'Homepage Featured','homepageFeatured','crop','center-center',444,1200,95,'2014-04-28 20:21:12','2014-04-28 20:21:12','2014-04-28 20:21:12','4a6eccc4-e09d-4919-9a96-81d561eaf550');
+INSERT INTO `craft_assettransforms` VALUES (1,'Homepage Featured','homepageFeatured','crop','center-center',444,1200,95,'2014-04-28 20:21:12','2014-04-28 20:21:12','2014-04-28 20:21:12','4a6eccc4-e09d-4919-9a96-81d561eaf550'),(2,'Portfolio Entry','portfolioEntry','crop','center-center',272,580,95,'2014-04-28 22:10:02','2014-04-28 22:10:02','2014-04-28 22:10:02','d97bcdb3-0918-4ceb-be16-ad7a54ff0c11');
 /*!40000 ALTER TABLE `craft_assettransforms` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -351,7 +351,7 @@ CREATE TABLE `craft_content` (
   KEY `craft_content_locale_fk` (`locale`),
   CONSTRAINT `craft_content_elementId_fk` FOREIGN KEY (`elementId`) REFERENCES `craft_elements` (`id`) ON DELETE CASCADE,
   CONSTRAINT `craft_content_locale_fk` FOREIGN KEY (`locale`) REFERENCES `craft_locales` (`locale`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -360,7 +360,7 @@ CREATE TABLE `craft_content` (
 
 LOCK TABLES `craft_content` WRITE;
 /*!40000 ALTER TABLE `craft_content` DISABLE KEYS */;
-INSERT INTO `craft_content` VALUES (1,1,'en_us',NULL,NULL,NULL,NULL,NULL,'2014-04-28 19:11:46','2014-04-28 19:11:46','e28bb902-f4e8-4e8a-8e87-0fb417985bd7'),(2,2,'en_us','Homepage','Welcome to Dev.craft-demo.com!','<p>It’s true, this site doesn’t have a whole lot of content yet, but don’t worry. Our web developers have just installed the CMS, and they’re setting things up for the content editors this very moment. Soon Dev.craft-demo.com will be an oasis of fresh perspectives, sharp analyses, and astute opinions that will keep you coming back again and again.</p>','Easy peasy websites.','Make the internet a more better place.','2014-04-28 19:11:49','2014-04-28 20:45:04','73df3db2-2305-434d-a163-b5d11fe14c19'),(9,9,'en_us','11-rustic-outdoor-ceremony-hay-bales',NULL,NULL,NULL,NULL,'2014-04-28 20:43:53','2014-04-28 20:43:53','4db36545-545d-4b95-9ad7-a36b6bf1dc08'),(10,10,'en_us','pic01',NULL,NULL,NULL,NULL,'2014-04-28 20:44:49','2014-04-28 20:44:49','89e4b454-64db-4011-b466-f4933fa12b74');
+INSERT INTO `craft_content` VALUES (1,1,'en_us',NULL,NULL,NULL,NULL,NULL,'2014-04-28 19:11:46','2014-04-28 19:11:46','e28bb902-f4e8-4e8a-8e87-0fb417985bd7'),(2,2,'en_us','Homepage','Welcome to Dev.craft-demo.com!','<p>It’s true, this site doesn’t have a whole lot of content yet, but don’t worry. Our web developers have just installed the CMS, and they’re setting things up for the content editors this very moment. Soon Dev.craft-demo.com will be an oasis of fresh perspectives, sharp analyses, and astute opinions that will keep you coming back again and again.</p>','Easy peasy websites.','Make the internet a more better place.','2014-04-28 19:11:49','2014-04-28 20:45:04','73df3db2-2305-434d-a163-b5d11fe14c19'),(9,9,'en_us','11-rustic-outdoor-ceremony-hay-bales',NULL,NULL,NULL,NULL,'2014-04-28 20:43:53','2014-04-28 20:43:53','4db36545-545d-4b95-9ad7-a36b6bf1dc08'),(10,10,'en_us','pic01',NULL,NULL,NULL,NULL,'2014-04-28 20:44:49','2014-04-28 20:44:49','89e4b454-64db-4011-b466-f4933fa12b74'),(11,11,'en_us','pic02',NULL,NULL,NULL,NULL,'2014-04-28 21:02:07','2014-04-28 21:02:07','a7baa243-4024-4a70-bd97-625113988eeb'),(12,12,'en_us','pic03',NULL,NULL,NULL,NULL,'2014-04-28 21:02:07','2014-04-28 21:02:07','a1537843-3f42-4c5b-a587-51f7dfe93731'),(13,13,'en_us','pic04',NULL,NULL,NULL,NULL,'2014-04-28 21:02:08','2014-04-28 21:02:08','ee5d1d49-3153-4307-be81-1071697fa358'),(14,14,'en_us','pic05',NULL,NULL,NULL,NULL,'2014-04-28 21:02:08','2014-04-28 21:02:08','ec2e9cc0-1f65-4fc1-8811-eec4ea0c5050'),(15,15,'en_us','pic06',NULL,NULL,NULL,NULL,'2014-04-28 21:02:08','2014-04-28 21:02:08','431ed994-9a7b-4a07-939b-9392a7896d48'),(16,16,'en_us','pic07',NULL,NULL,NULL,NULL,'2014-04-28 21:02:09','2014-04-28 21:02:09','05daee09-206b-4975-a8de-b7fda9373d4d'),(17,17,'en_us','pic08',NULL,NULL,NULL,NULL,'2014-04-28 21:02:09','2014-04-28 21:02:09','7518a6c5-adc2-4b72-8fb0-263aca6be9a5'),(18,18,'en_us','pic09',NULL,NULL,NULL,NULL,'2014-04-28 21:02:10','2014-04-28 21:02:10','543cc787-3935-41e0-b9fb-6b4f99abdb7e'),(19,19,'en_us','pic10',NULL,NULL,NULL,NULL,'2014-04-28 21:02:10','2014-04-28 21:02:10','adc36baf-d66a-4e00-9182-4db336f00816'),(20,20,'en_us','My First Project',NULL,'<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.</p>',NULL,NULL,'2014-04-28 21:02:20','2014-04-28 21:12:01','d40b78d0-c79b-4db0-9920-4b1a4b039566'),(21,21,'en_us','Another Great One',NULL,'<p>Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Sed posuere consectetur est at lobortis.</p>',NULL,NULL,'2014-04-28 21:02:34','2014-04-28 21:11:55','0d86ea2f-d83c-46c9-ab3d-1c5c97972956'),(22,22,'en_us','My Finest Work',NULL,'<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cras mattis consectetur purus sit amet fermentum.</p>',NULL,NULL,'2014-04-28 21:02:48','2014-04-28 21:11:49','1f8420fe-aef4-4725-96c4-8be62d744c74');
 /*!40000 ALTER TABLE `craft_content` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -420,7 +420,7 @@ CREATE TABLE `craft_elements` (
   KEY `craft_elements_type_idx` (`type`),
   KEY `craft_elements_enabled_idx` (`enabled`),
   KEY `craft_elements_archived_idx` (`archived`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -429,7 +429,7 @@ CREATE TABLE `craft_elements` (
 
 LOCK TABLES `craft_elements` WRITE;
 /*!40000 ALTER TABLE `craft_elements` DISABLE KEYS */;
-INSERT INTO `craft_elements` VALUES (1,'User',1,0,'2014-04-28 19:11:46','2014-04-28 19:11:46','15fb4644-6d3a-4106-a8e7-aa3c29db45eb'),(2,'Entry',1,0,'2014-04-28 19:11:49','2014-04-28 20:45:04','199cfd0d-c3d0-4e9a-a0d2-d8393cf7c6ba'),(9,'Asset',1,0,'2014-04-28 20:43:53','2014-04-28 20:43:53','784fbc6d-0ed4-4828-83c7-6926609abc4e'),(10,'Asset',1,0,'2014-04-28 20:44:49','2014-04-28 20:44:49','f54b938c-747e-419c-9921-a662a5d5902a');
+INSERT INTO `craft_elements` VALUES (1,'User',1,0,'2014-04-28 19:11:46','2014-04-28 19:11:46','15fb4644-6d3a-4106-a8e7-aa3c29db45eb'),(2,'Entry',1,0,'2014-04-28 19:11:49','2014-04-28 20:45:04','199cfd0d-c3d0-4e9a-a0d2-d8393cf7c6ba'),(9,'Asset',1,0,'2014-04-28 20:43:53','2014-04-28 20:43:53','784fbc6d-0ed4-4828-83c7-6926609abc4e'),(10,'Asset',1,0,'2014-04-28 20:44:49','2014-04-28 20:44:49','f54b938c-747e-419c-9921-a662a5d5902a'),(11,'Asset',1,0,'2014-04-28 21:02:07','2014-04-28 21:02:07','5f1b4778-8a6f-488e-b51a-8e925fd90f93'),(12,'Asset',1,0,'2014-04-28 21:02:07','2014-04-28 21:02:07','4255b93c-270d-48c8-b4f3-1e1cb786ff34'),(13,'Asset',1,0,'2014-04-28 21:02:08','2014-04-28 21:02:08','7808b5b0-1807-467a-a45d-40737e502594'),(14,'Asset',1,0,'2014-04-28 21:02:08','2014-04-28 21:02:08','f9647f97-1ed1-48cb-99e2-254e122688d4'),(15,'Asset',1,0,'2014-04-28 21:02:08','2014-04-28 21:02:08','bc065d1c-4c8a-4cfa-83d9-1db72b9e12af'),(16,'Asset',1,0,'2014-04-28 21:02:09','2014-04-28 21:02:09','8dd52768-07bc-4b12-9f5f-25d3dc6f8900'),(17,'Asset',1,0,'2014-04-28 21:02:09','2014-04-28 21:02:09','bacab688-5ede-43da-bf27-f9b674da07b8'),(18,'Asset',1,0,'2014-04-28 21:02:10','2014-04-28 21:02:10','36732b8b-aaac-42b3-a42a-2f03b6c0714a'),(19,'Asset',1,0,'2014-04-28 21:02:10','2014-04-28 21:02:10','31c2f1ae-14ab-4da9-9535-e1346594f5cb'),(20,'Entry',1,0,'2014-04-28 21:02:20','2014-04-28 21:12:01','33e85490-8ef2-4f58-af4f-cc489cb9d297'),(21,'Entry',1,0,'2014-04-28 21:02:34','2014-04-28 21:11:55','379b974e-7c4d-4823-ac10-a8114f26fe95'),(22,'Entry',1,0,'2014-04-28 21:02:48','2014-04-28 21:11:49','3b773cbc-e024-46f5-a20e-25fa28c45b0f');
 /*!40000 ALTER TABLE `craft_elements` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -458,7 +458,7 @@ CREATE TABLE `craft_elements_i18n` (
   KEY `craft_elements_i18n_locale_fk` (`locale`),
   CONSTRAINT `craft_elements_i18n_locale_fk` FOREIGN KEY (`locale`) REFERENCES `craft_locales` (`locale`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `craft_elements_i18n_elementId_fk` FOREIGN KEY (`elementId`) REFERENCES `craft_elements` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -467,7 +467,7 @@ CREATE TABLE `craft_elements_i18n` (
 
 LOCK TABLES `craft_elements_i18n` WRITE;
 /*!40000 ALTER TABLE `craft_elements_i18n` DISABLE KEYS */;
-INSERT INTO `craft_elements_i18n` VALUES (1,1,'en_us','',NULL,1,'2014-04-28 19:11:46','2014-04-28 19:11:46','bf082207-64c0-47fb-b44d-4659123c0219'),(2,2,'en_us','homepage','__home__',1,'2014-04-28 19:11:49','2014-04-28 20:45:04','93290c1d-6e12-4b66-a80b-9c120f110f5d'),(9,9,'en_us','11-rustic-outdoor-ceremony-hay-bales',NULL,1,'2014-04-28 20:43:53','2014-04-28 20:43:53','54ef7db9-6dc8-484f-a6fa-d747c04d3834'),(10,10,'en_us','pic01',NULL,1,'2014-04-28 20:44:49','2014-04-28 20:44:49','a1127a55-94ab-4243-90a4-150d60df550c');
+INSERT INTO `craft_elements_i18n` VALUES (1,1,'en_us','',NULL,1,'2014-04-28 19:11:46','2014-04-28 19:11:46','bf082207-64c0-47fb-b44d-4659123c0219'),(2,2,'en_us','homepage','__home__',1,'2014-04-28 19:11:49','2014-04-28 20:45:04','93290c1d-6e12-4b66-a80b-9c120f110f5d'),(9,9,'en_us','11-rustic-outdoor-ceremony-hay-bales',NULL,1,'2014-04-28 20:43:53','2014-04-28 20:43:53','54ef7db9-6dc8-484f-a6fa-d747c04d3834'),(10,10,'en_us','pic01',NULL,1,'2014-04-28 20:44:49','2014-04-28 20:44:49','a1127a55-94ab-4243-90a4-150d60df550c'),(11,11,'en_us','pic02',NULL,1,'2014-04-28 21:02:07','2014-04-28 21:02:07','74764a6b-ff8e-42e1-bb8c-c857419cc0f0'),(12,12,'en_us','pic03',NULL,1,'2014-04-28 21:02:07','2014-04-28 21:02:07','f655e996-6a9b-4b6f-8c52-b5a5d9ad42f3'),(13,13,'en_us','pic04',NULL,1,'2014-04-28 21:02:08','2014-04-28 21:02:08','22a4068b-2559-4e11-9be3-9929d9ac71dd'),(14,14,'en_us','pic05',NULL,1,'2014-04-28 21:02:08','2014-04-28 21:02:08','efe1921c-1d94-47fb-946e-e8beaea2966f'),(15,15,'en_us','pic06',NULL,1,'2014-04-28 21:02:08','2014-04-28 21:02:08','a93441c9-9828-4213-9f59-b052bd8b6036'),(16,16,'en_us','pic07',NULL,1,'2014-04-28 21:02:09','2014-04-28 21:02:09','c3269702-da2a-41ef-b52e-637a6460dc3e'),(17,17,'en_us','pic08',NULL,1,'2014-04-28 21:02:09','2014-04-28 21:02:09','d810250f-188f-4e7f-903e-c31420d341c3'),(18,18,'en_us','pic09',NULL,1,'2014-04-28 21:02:10','2014-04-28 21:02:10','8870a90c-1dcc-4f05-935e-eb2d40b0b8e3'),(19,19,'en_us','pic10',NULL,1,'2014-04-28 21:02:10','2014-04-28 21:02:10','0621f5a6-300c-4d39-9923-42ce894c6712'),(20,20,'en_us','my-first-project','portfolio/my-first-project',1,'2014-04-28 21:02:20','2014-04-28 21:12:01','f9de7fa5-4604-421d-9ddf-1e32f1255929'),(21,21,'en_us','another-great-one','portfolio/another-great-one',1,'2014-04-28 21:02:34','2014-04-28 21:11:55','5a7eaade-bda3-4b16-8097-f8190d25e766'),(22,22,'en_us','my-finest-work','portfolio/my-finest-work',1,'2014-04-28 21:02:48','2014-04-28 21:11:49','b65d3c9c-aa83-41c0-9b59-89dca3d76c9a');
 /*!40000 ALTER TABLE `craft_elements_i18n` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -539,7 +539,7 @@ CREATE TABLE `craft_entries` (
 
 LOCK TABLES `craft_entries` WRITE;
 /*!40000 ALTER TABLE `craft_entries` DISABLE KEYS */;
-INSERT INTO `craft_entries` VALUES (2,1,1,NULL,'2014-04-28 19:11:49',NULL,'2014-04-28 19:11:49','2014-04-28 20:45:04','2b48feee-0517-4670-95cf-f1431517d518');
+INSERT INTO `craft_entries` VALUES (2,1,1,NULL,'2014-04-28 19:11:49',NULL,'2014-04-28 19:11:49','2014-04-28 20:45:04','2b48feee-0517-4670-95cf-f1431517d518'),(20,3,3,1,'2014-04-28 21:02:00',NULL,'2014-04-28 21:02:20','2014-04-28 21:12:01','0f188091-81fa-4323-a7c4-8fb5b0d75dcc'),(21,3,3,1,'2014-04-28 21:02:00',NULL,'2014-04-28 21:02:34','2014-04-28 21:11:55','cfa3037b-c6df-4425-aabf-d2c3a610530e'),(22,3,3,1,'2014-04-28 21:02:00',NULL,'2014-04-28 21:02:48','2014-04-28 21:11:49','2818f611-888c-4770-b5e2-9731c6739f48');
 /*!40000 ALTER TABLE `craft_entries` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -609,7 +609,7 @@ CREATE TABLE `craft_entrytypes` (
   KEY `craft_entrytypes_fieldLayoutId_fk` (`fieldLayoutId`),
   CONSTRAINT `craft_entrytypes_fieldLayoutId_fk` FOREIGN KEY (`fieldLayoutId`) REFERENCES `craft_fieldlayouts` (`id`) ON DELETE SET NULL,
   CONSTRAINT `craft_entrytypes_sectionId_fk` FOREIGN KEY (`sectionId`) REFERENCES `craft_sections` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -618,7 +618,7 @@ CREATE TABLE `craft_entrytypes` (
 
 LOCK TABLES `craft_entrytypes` WRITE;
 /*!40000 ALTER TABLE `craft_entrytypes` DISABLE KEYS */;
-INSERT INTO `craft_entrytypes` VALUES (1,1,8,'Homepage','homepage',1,NULL,NULL,NULL,'2014-04-28 19:11:49','2014-04-28 20:28:25','a4f9152c-f5be-482a-af89-4ca35c5caba2');
+INSERT INTO `craft_entrytypes` VALUES (1,1,8,'Homepage','homepage',1,NULL,NULL,NULL,'2014-04-28 19:11:49','2014-04-28 20:28:25','a4f9152c-f5be-482a-af89-4ca35c5caba2'),(3,3,15,'Portfolio','portfolio',1,'Title',NULL,NULL,'2014-04-28 20:58:51','2014-04-28 21:11:03','d2113014-e336-4c21-a5c8-43aeb260c39b');
 /*!40000 ALTER TABLE `craft_entrytypes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -676,7 +676,7 @@ CREATE TABLE `craft_fieldgroups` (
   `uid` char(36) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `craft_fieldgroups_name_unq_idx` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -685,7 +685,7 @@ CREATE TABLE `craft_fieldgroups` (
 
 LOCK TABLES `craft_fieldgroups` WRITE;
 /*!40000 ALTER TABLE `craft_fieldgroups` DISABLE KEYS */;
-INSERT INTO `craft_fieldgroups` VALUES (1,'Default','2014-04-28 19:11:49','2014-04-28 19:11:49','990ff438-80fb-4c12-94e5-24f6660698ce'),(2,'Homepage','2014-04-28 19:54:42','2014-04-28 19:54:42','971291c9-d5e8-4939-9683-9323c9d5e316');
+INSERT INTO `craft_fieldgroups` VALUES (1,'Default','2014-04-28 19:11:49','2014-04-28 19:11:49','990ff438-80fb-4c12-94e5-24f6660698ce'),(2,'Homepage','2014-04-28 19:54:42','2014-04-28 19:54:42','971291c9-d5e8-4939-9683-9323c9d5e316'),(3,'Portfolio','2014-04-28 20:53:53','2014-04-28 20:53:53','2af36869-b3d4-481c-b72c-8020c7d3badd');
 /*!40000 ALTER TABLE `craft_fieldgroups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -714,7 +714,7 @@ CREATE TABLE `craft_fieldlayoutfields` (
   CONSTRAINT `craft_fieldlayoutfields_fieldId_fk` FOREIGN KEY (`fieldId`) REFERENCES `craft_fields` (`id`) ON DELETE CASCADE,
   CONSTRAINT `craft_fieldlayoutfields_layoutId_fk` FOREIGN KEY (`layoutId`) REFERENCES `craft_fieldlayouts` (`id`) ON DELETE CASCADE,
   CONSTRAINT `craft_fieldlayoutfields_tabId_fk` FOREIGN KEY (`tabId`) REFERENCES `craft_fieldlayouttabs` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -723,7 +723,7 @@ CREATE TABLE `craft_fieldlayoutfields` (
 
 LOCK TABLES `craft_fieldlayoutfields` WRITE;
 /*!40000 ALTER TABLE `craft_fieldlayoutfields` DISABLE KEYS */;
-INSERT INTO `craft_fieldlayoutfields` VALUES (3,5,2,2,1,1,'2014-04-28 19:11:49','2014-04-28 19:11:49','394f1265-1fb6-48c4-8365-88e48dabf465'),(4,5,2,3,0,2,'2014-04-28 19:11:49','2014-04-28 19:11:49','f9e9a01a-bc7b-4ffd-acc6-b277d5000475'),(7,8,4,4,1,1,'2014-04-28 20:28:25','2014-04-28 20:28:25','6b948bbe-22a8-4c8b-a43b-f2caa0bb21d1'),(8,8,4,5,1,2,'2014-04-28 20:28:25','2014-04-28 20:28:25','372f3c3d-cefb-4a0d-ad0a-74108c752b03'),(9,8,4,6,1,3,'2014-04-28 20:28:25','2014-04-28 20:28:25','2e24eb22-d6f5-4cc2-8c3c-924aca3a7335');
+INSERT INTO `craft_fieldlayoutfields` VALUES (3,5,2,2,1,1,'2014-04-28 19:11:49','2014-04-28 19:11:49','394f1265-1fb6-48c4-8365-88e48dabf465'),(4,5,2,3,0,2,'2014-04-28 19:11:49','2014-04-28 19:11:49','f9e9a01a-bc7b-4ffd-acc6-b277d5000475'),(7,8,4,4,1,1,'2014-04-28 20:28:25','2014-04-28 20:28:25','6b948bbe-22a8-4c8b-a43b-f2caa0bb21d1'),(8,8,4,5,1,2,'2014-04-28 20:28:25','2014-04-28 20:28:25','372f3c3d-cefb-4a0d-ad0a-74108c752b03'),(9,8,4,6,1,3,'2014-04-28 20:28:25','2014-04-28 20:28:25','2e24eb22-d6f5-4cc2-8c3c-924aca3a7335'),(11,15,6,7,1,1,'2014-04-28 21:11:03','2014-04-28 21:11:03','9b68d06b-a532-45e7-a69a-10a3d96234f8'),(12,15,6,2,0,2,'2014-04-28 21:11:03','2014-04-28 21:11:03','56f16bc8-b280-49e6-95fa-243bde66fd88');
 /*!40000 ALTER TABLE `craft_fieldlayoutfields` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -742,7 +742,7 @@ CREATE TABLE `craft_fieldlayouts` (
   `uid` char(36) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `craft_fieldlayouts_type_idx` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -751,7 +751,7 @@ CREATE TABLE `craft_fieldlayouts` (
 
 LOCK TABLES `craft_fieldlayouts` WRITE;
 /*!40000 ALTER TABLE `craft_fieldlayouts` DISABLE KEYS */;
-INSERT INTO `craft_fieldlayouts` VALUES (1,'Tag','2014-04-28 19:11:49','2014-04-28 19:11:49','f969b77e-aa8e-43b1-b78b-8ae685f61df6'),(5,'Entry','2014-04-28 19:11:49','2014-04-28 19:11:49','5faf8a95-2fff-447c-954e-fde732d187ae'),(8,'Entry','2014-04-28 20:28:25','2014-04-28 20:28:25','3d25b2d5-8bb8-4e42-97f5-fad15376d253'),(12,'Asset','2014-04-28 20:40:12','2014-04-28 20:40:12','70b1a6cf-e4ae-4177-9466-10c4e9a07ce9');
+INSERT INTO `craft_fieldlayouts` VALUES (1,'Tag','2014-04-28 19:11:49','2014-04-28 19:11:49','f969b77e-aa8e-43b1-b78b-8ae685f61df6'),(5,'Entry','2014-04-28 19:11:49','2014-04-28 19:11:49','5faf8a95-2fff-447c-954e-fde732d187ae'),(8,'Entry','2014-04-28 20:28:25','2014-04-28 20:28:25','3d25b2d5-8bb8-4e42-97f5-fad15376d253'),(12,'Asset','2014-04-28 20:40:12','2014-04-28 20:40:12','70b1a6cf-e4ae-4177-9466-10c4e9a07ce9'),(15,'Entry','2014-04-28 21:11:03','2014-04-28 21:11:03','3ce41cdb-7013-4d12-8f7e-831862ae598c');
 /*!40000 ALTER TABLE `craft_fieldlayouts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -774,7 +774,7 @@ CREATE TABLE `craft_fieldlayouttabs` (
   KEY `craft_fieldlayouttabs_sortOrder_idx` (`sortOrder`),
   KEY `craft_fieldlayouttabs_layoutId_fk` (`layoutId`),
   CONSTRAINT `craft_fieldlayouttabs_layoutId_fk` FOREIGN KEY (`layoutId`) REFERENCES `craft_fieldlayouts` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -783,7 +783,7 @@ CREATE TABLE `craft_fieldlayouttabs` (
 
 LOCK TABLES `craft_fieldlayouttabs` WRITE;
 /*!40000 ALTER TABLE `craft_fieldlayouttabs` DISABLE KEYS */;
-INSERT INTO `craft_fieldlayouttabs` VALUES (2,5,'Content',1,'2014-04-28 19:11:49','2014-04-28 19:11:49','9373e7ab-34dc-4866-ad7c-9321c1e6919d'),(4,8,'Content',1,'2014-04-28 20:28:25','2014-04-28 20:28:25','e62ce9ce-9e57-4a43-bffa-6edc74d840df');
+INSERT INTO `craft_fieldlayouttabs` VALUES (2,5,'Content',1,'2014-04-28 19:11:49','2014-04-28 19:11:49','9373e7ab-34dc-4866-ad7c-9321c1e6919d'),(4,8,'Content',1,'2014-04-28 20:28:25','2014-04-28 20:28:25','e62ce9ce-9e57-4a43-bffa-6edc74d840df'),(6,15,'Portfolio',1,'2014-04-28 21:11:03','2014-04-28 21:11:03','a339f049-fe1d-471e-af0b-127b69c092d5');
 /*!40000 ALTER TABLE `craft_fieldlayouttabs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -812,7 +812,7 @@ CREATE TABLE `craft_fields` (
   KEY `craft_fields_context_idx` (`context`),
   KEY `craft_fields_groupId_fk` (`groupId`),
   CONSTRAINT `craft_fields_groupId_fk` FOREIGN KEY (`groupId`) REFERENCES `craft_fieldgroups` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -821,7 +821,7 @@ CREATE TABLE `craft_fields` (
 
 LOCK TABLES `craft_fields` WRITE;
 /*!40000 ALTER TABLE `craft_fields` DISABLE KEYS */;
-INSERT INTO `craft_fields` VALUES (1,1,'Heading','heading','global',NULL,1,'PlainText',NULL,'2014-04-28 19:11:49','2014-04-28 19:11:49','e63c74c6-d54b-4c0f-9600-ad7814d3380c'),(2,1,'Body','body','global',NULL,1,'RichText','{\"configFile\":\"Standard.json\"}','2014-04-28 19:11:49','2014-04-28 19:11:49','4658bf27-74f9-48c6-8178-c0283a247b8b'),(3,1,'Tags','tags','global',NULL,0,'Tags','{\"source\":\"taggroup:1\"}','2014-04-28 19:11:49','2014-04-28 19:11:49','563de3b7-8dd6-4b59-a274-b23cf72a6cf6'),(4,2,'Featured Heading','featuredHeading','global','',0,'PlainText','{\"placeholder\":\"\",\"maxLength\":\"\",\"multiline\":\"\",\"initialRows\":\"4\"}','2014-04-28 19:55:52','2014-04-28 19:55:52','86cff203-0188-4d9c-b174-b5701720e22f'),(5,2,'Featured Subhead','featuredSubhead','global','',0,'PlainText','{\"placeholder\":\"\",\"maxLength\":\"\",\"multiline\":\"\",\"initialRows\":\"4\"}','2014-04-28 19:56:01','2014-04-28 19:56:01','7f975403-772d-437b-8588-e9e022aadcdd'),(6,1,'Image','image','global','',0,'Assets','{\"useSingleFolder\":\"\",\"sources\":[\"1\"],\"defaultUploadLocationSource\":\"1\",\"defaultUploadLocationSubpath\":\"\",\"singleUploadLocationSource\":\"1\",\"singleUploadLocationSubpath\":\"\",\"restrictFiles\":\"1\",\"allowedKinds\":[\"image\"],\"limit\":\"1\"}','2014-04-28 20:26:34','2014-04-28 20:26:34','0122f9b6-4d86-436e-bb89-f69adbd58d0e');
+INSERT INTO `craft_fields` VALUES (1,1,'Heading','heading','global',NULL,1,'PlainText',NULL,'2014-04-28 19:11:49','2014-04-28 19:11:49','e63c74c6-d54b-4c0f-9600-ad7814d3380c'),(2,1,'Body','body','global',NULL,1,'RichText','{\"configFile\":\"Standard.json\"}','2014-04-28 19:11:49','2014-04-28 19:11:49','4658bf27-74f9-48c6-8178-c0283a247b8b'),(3,1,'Tags','tags','global',NULL,0,'Tags','{\"source\":\"taggroup:1\"}','2014-04-28 19:11:49','2014-04-28 19:11:49','563de3b7-8dd6-4b59-a274-b23cf72a6cf6'),(4,2,'Featured Heading','featuredHeading','global','',0,'PlainText','{\"placeholder\":\"\",\"maxLength\":\"\",\"multiline\":\"\",\"initialRows\":\"4\"}','2014-04-28 19:55:52','2014-04-28 19:55:52','86cff203-0188-4d9c-b174-b5701720e22f'),(5,2,'Featured Subhead','featuredSubhead','global','',0,'PlainText','{\"placeholder\":\"\",\"maxLength\":\"\",\"multiline\":\"\",\"initialRows\":\"4\"}','2014-04-28 19:56:01','2014-04-28 19:56:01','7f975403-772d-437b-8588-e9e022aadcdd'),(6,1,'Image','image','global','',0,'Assets','{\"useSingleFolder\":\"\",\"sources\":[\"1\"],\"defaultUploadLocationSource\":\"1\",\"defaultUploadLocationSubpath\":\"\",\"singleUploadLocationSource\":\"1\",\"singleUploadLocationSubpath\":\"\",\"restrictFiles\":\"1\",\"allowedKinds\":[\"image\"],\"limit\":\"1\"}','2014-04-28 20:26:34','2014-04-28 20:26:34','0122f9b6-4d86-436e-bb89-f69adbd58d0e'),(7,3,'Portfolio Images','portfolioImages','global','',0,'Assets','{\"useSingleFolder\":\"\",\"sources\":[\"1\"],\"defaultUploadLocationSource\":\"1\",\"defaultUploadLocationSubpath\":\"\",\"singleUploadLocationSource\":\"1\",\"singleUploadLocationSubpath\":\"\",\"restrictFiles\":\"1\",\"allowedKinds\":[\"image\"],\"limit\":\"\"}','2014-04-28 20:54:56','2014-04-28 20:54:56','2f13075c-41d3-49ab-a690-ff7af2589753');
 /*!40000 ALTER TABLE `craft_fields` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1117,7 +1117,7 @@ CREATE TABLE `craft_relations` (
   CONSTRAINT `craft_relations_fieldId_fk` FOREIGN KEY (`fieldId`) REFERENCES `craft_fields` (`id`) ON DELETE CASCADE,
   CONSTRAINT `craft_relations_sourceId_fk` FOREIGN KEY (`sourceId`) REFERENCES `craft_elements` (`id`) ON DELETE CASCADE,
   CONSTRAINT `craft_relations_sourceLocale_fk` FOREIGN KEY (`sourceLocale`) REFERENCES `craft_locales` (`locale`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1126,7 +1126,7 @@ CREATE TABLE `craft_relations` (
 
 LOCK TABLES `craft_relations` WRITE;
 /*!40000 ALTER TABLE `craft_relations` DISABLE KEYS */;
-INSERT INTO `craft_relations` VALUES (3,6,2,NULL,10,1,'2014-04-28 20:45:04','2014-04-28 20:45:04','38e120aa-6237-48f9-879b-85170387848f');
+INSERT INTO `craft_relations` VALUES (3,6,2,NULL,10,1,'2014-04-28 20:45:04','2014-04-28 20:45:04','38e120aa-6237-48f9-879b-85170387848f'),(23,7,22,NULL,13,1,'2014-04-28 21:11:49','2014-04-28 21:11:49','f48b13e5-dc74-4312-9e58-f2516cecffd3'),(24,7,22,NULL,14,2,'2014-04-28 21:11:49','2014-04-28 21:11:49','9002bae5-a56d-4b81-a66e-751f53e579bd'),(25,7,22,NULL,15,3,'2014-04-28 21:11:49','2014-04-28 21:11:49','1f0a2d9d-5e89-4835-ac42-0afe19de16a5'),(26,7,21,NULL,12,1,'2014-04-28 21:11:55','2014-04-28 21:11:55','dec480cf-1aa9-4b04-96f0-b0f6a8d514f4'),(27,7,21,NULL,13,2,'2014-04-28 21:11:55','2014-04-28 21:11:55','099d2adf-abb8-4028-84b9-d74231493e55'),(28,7,21,NULL,14,3,'2014-04-28 21:11:55','2014-04-28 21:11:55','0d58147f-8b64-40bb-8b61-52109ea7b7da'),(29,7,20,NULL,11,1,'2014-04-28 21:12:01','2014-04-28 21:12:01','437a9528-9f85-431c-9190-270fae6c102b'),(30,7,20,NULL,12,2,'2014-04-28 21:12:01','2014-04-28 21:12:01','744c95f0-a908-478b-9dd2-7d5027e3c2c1'),(31,7,20,NULL,13,3,'2014-04-28 21:12:01','2014-04-28 21:12:01','301dae01-0518-4934-bdb2-c0ded1d0e770');
 /*!40000 ALTER TABLE `craft_relations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1187,7 +1187,7 @@ CREATE TABLE `craft_searchindex` (
 
 LOCK TABLES `craft_searchindex` WRITE;
 /*!40000 ALTER TABLE `craft_searchindex` DISABLE KEYS */;
-INSERT INTO `craft_searchindex` VALUES (1,'username',0,'en_us',' admin '),(1,'firstname',0,'en_us',''),(1,'lastname',0,'en_us',''),(1,'fullname',0,'en_us',''),(1,'email',0,'en_us',' cmalven chrismalven com '),(1,'slug',0,'en_us',''),(2,'field',1,'en_us',' welcome to dev craft demo com '),(2,'field',2,'en_us',' it s true this site doesn t have a whole lot of content yet but don t worry our web developers have just installed the cms and they re setting things up for the content editors this very moment soon dev craft demo com will be an oasis of fresh perspectives sharp analyses and astute opinions that will keep you coming back again and again '),(2,'slug',0,'en_us',' homepage '),(2,'title',0,'en_us',' homepage '),(3,'field',2,'en_us',' craft is the cms that s powering dev craft demo com it s beautiful powerful flexible and easy to use and it s made by pixel tonic we can t wait to dive in and see what it s capable of this is even more captivating content which you couldn t see on the news index page because it was entered after a page break and the news index template only likes to show the content on the first page craft a nice alternative to word if you re making a website '),(3,'field',3,'en_us',''),(3,'slug',0,'en_us',''),(3,'title',0,'en_us',' we just installed craft '),(2,'field',4,'en_us',' easy peasy websites '),(2,'field',5,'en_us',' make the internet a more better place '),(4,'filename',0,'en_us',' 10 anemones pink purple bouquet jpg '),(4,'extension',0,'en_us',' jpg '),(4,'kind',0,'en_us',' image '),(4,'slug',0,'en_us',''),(4,'title',0,'en_us',' 10 anemones pink purple bouquet '),(2,'field',6,'en_us',' 11 rustic outdoor ceremony hay bales '),(5,'filename',0,'en_us',' 8 seattle fall wedding corson building1 jpg '),(5,'extension',0,'en_us',' jpg '),(5,'kind',0,'en_us',' image '),(5,'slug',0,'en_us',''),(5,'title',0,'en_us',' 8 seattle fall wedding corson building1 '),(6,'filename',0,'en_us',' 11 rustic outdoor ceremony hay bales jpg '),(6,'extension',0,'en_us',' jpg '),(6,'kind',0,'en_us',' image '),(6,'slug',0,'en_us',''),(6,'title',0,'en_us',' 11 rustic outdoor ceremony hay bales '),(7,'filename',0,'en_us',' 10 anemones pink purple bouquet jpg '),(7,'extension',0,'en_us',' jpg '),(7,'kind',0,'en_us',' image '),(7,'slug',0,'en_us',''),(7,'title',0,'en_us',' 10 anemones pink purple bouquet '),(8,'filename',0,'en_us',' 10 anemones pink purple bouquet jpg '),(8,'extension',0,'en_us',' jpg '),(8,'kind',0,'en_us',' image '),(8,'slug',0,'en_us',''),(8,'title',0,'en_us',' 10 anemones pink purple bouquet '),(9,'filename',0,'en_us',' 11 rustic outdoor ceremony hay bales jpg '),(9,'extension',0,'en_us',' jpg '),(9,'kind',0,'en_us',' image '),(9,'slug',0,'en_us',''),(9,'title',0,'en_us',' 11 rustic outdoor ceremony hay bales '),(10,'filename',0,'en_us',' pic01 jpg '),(10,'extension',0,'en_us',' jpg '),(10,'kind',0,'en_us',' image '),(10,'slug',0,'en_us',''),(10,'title',0,'en_us',' pic01 ');
+INSERT INTO `craft_searchindex` VALUES (1,'username',0,'en_us',' admin '),(1,'firstname',0,'en_us',''),(1,'lastname',0,'en_us',''),(1,'fullname',0,'en_us',''),(1,'email',0,'en_us',' cmalven chrismalven com '),(1,'slug',0,'en_us',''),(2,'field',1,'en_us',' welcome to dev craft demo com '),(2,'field',2,'en_us',' it s true this site doesn t have a whole lot of content yet but don t worry our web developers have just installed the cms and they re setting things up for the content editors this very moment soon dev craft demo com will be an oasis of fresh perspectives sharp analyses and astute opinions that will keep you coming back again and again '),(2,'slug',0,'en_us',' homepage '),(2,'title',0,'en_us',' homepage '),(3,'field',2,'en_us',' craft is the cms that s powering dev craft demo com it s beautiful powerful flexible and easy to use and it s made by pixel tonic we can t wait to dive in and see what it s capable of this is even more captivating content which you couldn t see on the news index page because it was entered after a page break and the news index template only likes to show the content on the first page craft a nice alternative to word if you re making a website '),(3,'field',3,'en_us',''),(3,'slug',0,'en_us',''),(3,'title',0,'en_us',' we just installed craft '),(2,'field',4,'en_us',' easy peasy websites '),(2,'field',5,'en_us',' make the internet a more better place '),(4,'filename',0,'en_us',' 10 anemones pink purple bouquet jpg '),(4,'extension',0,'en_us',' jpg '),(4,'kind',0,'en_us',' image '),(4,'slug',0,'en_us',''),(4,'title',0,'en_us',' 10 anemones pink purple bouquet '),(2,'field',6,'en_us',' 11 rustic outdoor ceremony hay bales '),(5,'filename',0,'en_us',' 8 seattle fall wedding corson building1 jpg '),(5,'extension',0,'en_us',' jpg '),(5,'kind',0,'en_us',' image '),(5,'slug',0,'en_us',''),(5,'title',0,'en_us',' 8 seattle fall wedding corson building1 '),(6,'filename',0,'en_us',' 11 rustic outdoor ceremony hay bales jpg '),(6,'extension',0,'en_us',' jpg '),(6,'kind',0,'en_us',' image '),(6,'slug',0,'en_us',''),(6,'title',0,'en_us',' 11 rustic outdoor ceremony hay bales '),(7,'filename',0,'en_us',' 10 anemones pink purple bouquet jpg '),(7,'extension',0,'en_us',' jpg '),(7,'kind',0,'en_us',' image '),(7,'slug',0,'en_us',''),(7,'title',0,'en_us',' 10 anemones pink purple bouquet '),(8,'filename',0,'en_us',' 10 anemones pink purple bouquet jpg '),(8,'extension',0,'en_us',' jpg '),(8,'kind',0,'en_us',' image '),(8,'slug',0,'en_us',''),(8,'title',0,'en_us',' 10 anemones pink purple bouquet '),(9,'filename',0,'en_us',' 11 rustic outdoor ceremony hay bales jpg '),(9,'extension',0,'en_us',' jpg '),(9,'kind',0,'en_us',' image '),(9,'slug',0,'en_us',''),(9,'title',0,'en_us',' 11 rustic outdoor ceremony hay bales '),(10,'filename',0,'en_us',' pic01 jpg '),(10,'extension',0,'en_us',' jpg '),(10,'kind',0,'en_us',' image '),(10,'slug',0,'en_us',''),(10,'title',0,'en_us',' pic01 '),(11,'filename',0,'en_us',' pic02 jpg '),(11,'extension',0,'en_us',' jpg '),(11,'kind',0,'en_us',' image '),(11,'slug',0,'en_us',''),(11,'title',0,'en_us',' pic02 '),(12,'filename',0,'en_us',' pic03 jpg '),(12,'extension',0,'en_us',' jpg '),(12,'kind',0,'en_us',' image '),(12,'slug',0,'en_us',''),(12,'title',0,'en_us',' pic03 '),(13,'filename',0,'en_us',' pic04 jpg '),(13,'extension',0,'en_us',' jpg '),(13,'kind',0,'en_us',' image '),(13,'slug',0,'en_us',''),(13,'title',0,'en_us',' pic04 '),(14,'filename',0,'en_us',' pic05 jpg '),(14,'extension',0,'en_us',' jpg '),(14,'kind',0,'en_us',' image '),(14,'slug',0,'en_us',''),(14,'title',0,'en_us',' pic05 '),(15,'filename',0,'en_us',' pic06 jpg '),(15,'extension',0,'en_us',' jpg '),(15,'kind',0,'en_us',' image '),(15,'slug',0,'en_us',''),(15,'title',0,'en_us',' pic06 '),(16,'filename',0,'en_us',' pic07 jpg '),(16,'extension',0,'en_us',' jpg '),(16,'kind',0,'en_us',' image '),(16,'slug',0,'en_us',''),(16,'title',0,'en_us',' pic07 '),(17,'filename',0,'en_us',' pic08 jpg '),(17,'extension',0,'en_us',' jpg '),(17,'kind',0,'en_us',' image '),(17,'slug',0,'en_us',''),(17,'title',0,'en_us',' pic08 '),(18,'filename',0,'en_us',' pic09 jpg '),(18,'extension',0,'en_us',' jpg '),(18,'kind',0,'en_us',' image '),(18,'slug',0,'en_us',''),(18,'title',0,'en_us',' pic09 '),(19,'filename',0,'en_us',' pic10 jpg '),(19,'extension',0,'en_us',' jpg '),(19,'kind',0,'en_us',' image '),(19,'slug',0,'en_us',''),(19,'title',0,'en_us',' pic10 '),(20,'field',7,'en_us',' pic02 pic03 pic04 '),(20,'slug',0,'en_us',' my first project '),(20,'title',0,'en_us',' my first project '),(21,'field',7,'en_us',' pic03 pic04 pic05 '),(21,'slug',0,'en_us',' another great one '),(21,'title',0,'en_us',' another great one '),(22,'field',7,'en_us',' pic04 pic05 pic06 '),(22,'slug',0,'en_us',' my finest work '),(22,'title',0,'en_us',' my finest work '),(23,'field',7,'en_us',' pic10 pic08 pic09 '),(23,'slug',0,'en_us',' masterpiece iii '),(23,'title',0,'en_us',' masterpiece iii '),(24,'field',7,'en_us',' pic09 pic10 '),(24,'slug',0,'en_us',' ink graphite '),(24,'title',0,'en_us',' ink graphite '),(24,'field',2,'en_us',' morbi leo risus porta ac consectetur ac vestibulum at eros nulla vitae elit libero a pharetra augue vestibulum id ligula porta felis euismod semper integer posuere erat a ante venenatis dapibus posuere velit aliquet cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus cras mattis consectetur purus sit amet fermentum maecenas faucibus mollis interdum '),(23,'field',2,'en_us',' fusce dapibus tellus ac cursus commodo tortor mauris condimentum nibh ut fermentum massa justo sit amet risus donec ullamcorper nulla non metus auctor fringilla nullam id dolor id nibh ultricies vehicula ut id elit aenean eu leo quam pellentesque ornare sem lacinia quam venenatis vestibulum etiam porta sem malesuada magna mollis euismod '),(22,'field',2,'en_us',' nullam id dolor id nibh ultricies vehicula ut id elit aenean lacinia bibendum nulla sed consectetur aenean lacinia bibendum nulla sed consectetur aenean eu leo quam pellentesque ornare sem lacinia quam venenatis vestibulum cras mattis consectetur purus sit amet fermentum '),(21,'field',2,'en_us',' etiam porta sem malesuada magna mollis euismod sed posuere consectetur est at lobortis maecenas faucibus mollis interdum cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus maecenas faucibus mollis interdum nulla vitae elit libero a pharetra augue sed posuere consectetur est at lobortis '),(20,'field',2,'en_us',' duis mollis est non commodo luctus nisi erat porttitor ligula eget lacinia odio sem nec elit donec ullamcorper nulla non metus auctor fringilla donec sed odio dui cras justo odio dapibus ac facilisis in egestas eget quam duis mollis est non commodo luctus nisi erat porttitor ligula eget lacinia odio sem nec elit donec id elit non mi porta gravida at eget metus ');
 /*!40000 ALTER TABLE `craft_searchindex` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1214,7 +1214,7 @@ CREATE TABLE `craft_sections` (
   UNIQUE KEY `craft_sections_handle_unq_idx` (`handle`),
   KEY `craft_sections_structureId_fk` (`structureId`),
   CONSTRAINT `craft_sections_structureId_fk` FOREIGN KEY (`structureId`) REFERENCES `craft_structures` (`id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1223,7 +1223,7 @@ CREATE TABLE `craft_sections` (
 
 LOCK TABLES `craft_sections` WRITE;
 /*!40000 ALTER TABLE `craft_sections` DISABLE KEYS */;
-INSERT INTO `craft_sections` VALUES (1,NULL,'Homepage','homepage','single',1,'index','2014-04-28 19:11:49','2014-04-28 19:11:49','1b6d2c7d-dc6b-4e6f-8752-d13d2692a449');
+INSERT INTO `craft_sections` VALUES (1,NULL,'Homepage','homepage','single',1,'index','2014-04-28 19:11:49','2014-04-28 19:11:49','1b6d2c7d-dc6b-4e6f-8752-d13d2692a449'),(3,NULL,'Portfolio','portfolio','channel',1,'portfolio/_entry','2014-04-28 20:58:51','2014-04-28 20:58:51','625b5616-4609-497d-a078-32c3d6c9279c');
 /*!40000 ALTER TABLE `craft_sections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1249,7 +1249,7 @@ CREATE TABLE `craft_sections_i18n` (
   KEY `craft_sections_i18n_locale_fk` (`locale`),
   CONSTRAINT `craft_sections_i18n_locale_fk` FOREIGN KEY (`locale`) REFERENCES `craft_locales` (`locale`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `craft_sections_i18n_sectionId_fk` FOREIGN KEY (`sectionId`) REFERENCES `craft_sections` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1258,7 +1258,7 @@ CREATE TABLE `craft_sections_i18n` (
 
 LOCK TABLES `craft_sections_i18n` WRITE;
 /*!40000 ALTER TABLE `craft_sections_i18n` DISABLE KEYS */;
-INSERT INTO `craft_sections_i18n` VALUES (1,1,'en_us',1,'__home__',NULL,'2014-04-28 19:11:49','2014-04-28 19:11:49','43fe9b44-87e9-43cb-a8b4-c9d6e1dbd4f2');
+INSERT INTO `craft_sections_i18n` VALUES (1,1,'en_us',1,'__home__',NULL,'2014-04-28 19:11:49','2014-04-28 19:11:49','43fe9b44-87e9-43cb-a8b4-c9d6e1dbd4f2'),(3,3,'en_us',0,'portfolio/{slug}',NULL,'2014-04-28 20:58:51','2014-04-28 20:58:51','8d395f55-8d21-4d40-9d3b-3a9654642750');
 /*!40000 ALTER TABLE `craft_sections_i18n` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1511,7 +1511,7 @@ CREATE TABLE `craft_tasks` (
   KEY `craft_tasks_lft_idx` (`lft`),
   KEY `craft_tasks_rgt_idx` (`rgt`),
   KEY `craft_tasks_level_idx` (`level`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1847,4 +1847,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-04-28 15:49:53
+-- Dump completed on 2014-04-28 17:27:00
