@@ -8,7 +8,7 @@
           <section id="header">
             
             <!-- Logo -->
-              <h1><a href="#">{{ siteName }}</a></h1>
+              <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
             
             <!-- Nav -->
               <nav id="nav">
@@ -46,11 +46,12 @@
 
         <!-- Banner -->
           <section id="banner">
-            <a href="http://facebook.com/DreametryDoodle">
-              <span class="image image-full"><img src="images/pic01.jpg" alt="" /></span>
+            <a href="http://www.buildwithcraft.com/">
+              {% set image = entry.image.first() %}
+              <span class="image image-full"><img src="{{ image.getUrl('homepageFeatured') }}" alt="" /></span>
               <header>
-                <h2>Lorem Ipsum Delor.</h2>
-                <span class="byline">A quick brown fox naps peacefully.</span>
+                <h2>{{ entry.featuredHeading }}</h2>
+                <span class="byline">{{ entry.featuredSubhead }}</span>
               </header>
             </a>
           </section>

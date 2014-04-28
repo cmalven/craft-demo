@@ -127,7 +127,40 @@ To save time, I've done a few things behind the scenes since we last left-off:
 
 ## 04: Building out the homepage entry.
 
-Now let's start thinking about how we'd convert this static template over to Craft.
+Now let's go through how we converted this static template to Craft.
 
-- We already have the `siteName` being pulled in. That's good.
-- We have a this big title block, which includes
+### The Heading Callout
+
+- We have a heading, subhead, and background image.
+- The heading and subhead are easy, we just added `featuredHeading` and `featuredSubhead` fields to the Homepage section.
+- Notice that we created a "Homepage" Fields subgroup to keep things a little bit more organized. This is really just for organizational purposes, it doesn't affect how you use Fields in any way.
+
+### Featured Image Asset
+
+- We haven't yet talked about adding images. Craft makes it really easy to upload and work with files, which it calls _Assets_. Images are just another type of asset to craft, but there are some unique things you can do with images, like transforms.
+- The first thing we're going to do is update `/craft/config/general.php` with some environment specific config.
+- We haven't talked about Environment Configs yet, but this is a good time to go into it.
+- If we open that file, we can see that we added a couple items to the array. Each of these is just checking for a URL pattern, and applying environment-specific settings/variables as necessary. You can use the exact same pattern in `db.php` to apply environment specific database connection settings.
+- The `siteURL` and `fileSystemPath` variables we've defined here can also be set in the Admin UI, but by defining them here we can easily set them per-environment and keep them in version control.
+- Now let's go to [Settings > Assets](http://dev.craft-demo.com/admin/settings/assets) in the admin.
+- I've added a source called just _Images_. For this demo I'm going to keep all images in one asset source, but for a real project you'd probably have one source for _Portfolio Images_, one for _PDFs_, another for _News Images_, etc.
+- For the _File System Path_ and _URL_ I'm using the variables I set in `general.php`.
+- If you were using assets subpaths, you'd probably use something like `{fileSystemPath}portfolio/` and `{siteUrl}{fileSystemPath}portfolio/` here.
+- We also need to make sure we have an `/assets/images` directory for these uploads to go in.
+
+### Featured Image Transforms
+
+- We can also set some image transforms. Transforms are a way to automatically grab scaled, cropped, or compressed images from the original uploaded source. It makes it so that your client can upload fullsize, uncompressed source images and you can be sure that you display them at a specific size. I've added a transform here specifically for our homepage featured image, which automatically scales and crops it to our desired size.
+
+### Featured Image Field
+
+- Now that we have a place to store our images, we needed to add a field to our Homepage section to assign the featured image.
+- I went to [Settings > Fields](http://dev.craft-demo.com/admin/settings/fields), and added a new Field to the Default Group.
+- I called this simply _Image_, because we may be using it for images besides on the homepage, and you can reuse the same field in as many sections as you want.
+- For the _Field Type_, I chose _Assets_, and I limited the selection only to the source I just added. I also restricted the allowed file type to _Image_, and set a limit of 1 upload.
+- Finally, I went to [Our Homepage Entry Type](http://dev.craft-demo.com/admin/settings/sections/1/entrytypes/1) and added the _Image_ field we just created.
+- Now I can edit the [Homepage Entry](http://dev.craft-demo.com/admin/entries/homepage/2) and upload an image.
+- In the `/includes/header.html` template, we just need to add a few tags.
+- `{% set image = entry.image.first() %}` just sets a variable to the first image in this entries `image` field. The `.first()` is necessary because entries can have multiple assets uploaded to one field, we just happened to limit to 1 in this case.
+- Next, in the `<img src=""…` we added `{{ image.getUrl('homepageFeatured') }}`. This code is a little more complicated than the most basic case, because we're requesting a transformed image. If Craft hasn't already generated and cached this transformed image, it will do so the first time it is requested.
+- Now if we visit our [homepage](http://dev.craft-demo.com/), we can see that everything works great.
