@@ -32,32 +32,51 @@
             <p>{{ entry.body }}</p>
             <section>
               <header>
-                <h3>So in conclusion ...</h3>
+                <h3>More Details ...</h3>
               </header>
-              <p>
-                Nunc diam iaculis massa, et aliquet nibh leo non nisl vitae porta lobortis, enim neque fringilla nunc, 
-                eget faucibus lacus sem quis nunc suspendisse nec lectus sit amet augue rutrum vulputate ut ut mi. Aenean 
-                elementum, mi sit amet porttitor lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-                sit amet nullam consequat feugiat dolore tempus. Elementum odio duis semper risus et lectus commodo fringilla. 
-                Maecenas sagittis convallis justo vel mattis. 
-              </p>
+              {% for block in entry.extendedDescription %}
+                {% if block.type == "copy" %}
+
+                  <p>{{ block.copyContent }}</p>
+
+                {% elseif block.type == "quote" %}
+
+                  <p class="quote">{{ block.quoteContent }}</p>
+
+                {% elseif block.type == "relatedProjects" %}
+                  
+                  <div class="extended-description-projects">
+                    {% for project in block.projectsContent.find() %}
+                      <a href="{{ project.url }}" class="extended-description-project">
+                        {% set image = project.portfolioImages.first() %}
+                        <img src="{{ image.getUrl('portfolioEntry') }}" alt="" />
+                        <h3>{{ project.title }}</h3>
+                      </a>
+                    {% endfor %}
+                  </div>
+
+                {% endif %}
+              {% endfor %}
             </section>
           </article>
 
         </div>
         <div class="4u">
+          {% for project in entry.relatedProjects.find() %}
 
-          <!-- Sidebar -->
-          <section class="box">
-            <a href="http://www.buildwithcraft.com" class="image image-full"><img src="/images/pic09.jpg" alt="" /></a>
-            <header>
-              <h3>Sed etiam lorem nulla</h3>
-            </header>
-            <p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-            <footer>
-              <a href="#" class="button alt">Magna sed taciti</a>
-            </footer>
-          </section>
+            <section class="box">
+              {% set image = project.portfolioImages.first() %}
+              <a href="{{ project.url }}" class="image image-full"><img src="{{ image.getUrl('portfolioEntry') }}" alt="" /></a>
+              <header>
+                <h3>{{ project.title }}</h3>
+              </header>
+              <p>{{ project.body }}</p>
+              <footer>
+                <a href="{{ project.url }}" class="button alt">View Project</a>
+              </footer>
+            </section>
+            
+          {% endfor %}
         </div>
       </div>
     </div>

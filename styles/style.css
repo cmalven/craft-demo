@@ -9,6 +9,42 @@
 */
 
 /*********************************************************************************/
+/* Custom                                                                        */
+/*********************************************************************************/
+
+p.quote {
+  margin: 60px;
+  margin-top: 45px;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.extended-description-projects {
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.extended-description-project {
+  width: 31.6%;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.extended-description-project img {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.extended-description-project h3 {
+  font-size: 16px;
+}
+
+.extended-description-project + .extended-description-project {
+  margin-left: 2%;
+}
+
+
+/*********************************************************************************/
 /* Basic                                                                         */
 /*********************************************************************************/
 

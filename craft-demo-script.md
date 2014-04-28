@@ -181,3 +181,83 @@ Now we're going to see how to build out and loop through these portfolio items.
 - Next we need an index and entry template for the Portfolio. For the entry template I just created a simple two-column layout for now.
 - For the index, I added a portfolio index link to `/templates/includes/header.html` and added some code to automatically set a current class based on the URL segment.
 - Then I adjusted the `/portfolio/index.html` template to output projects in exactly the same way we did in `index.html`
+
+## 06: Relations and Matrix
+
+The last thing I want to cover as quickly as possible are the Relation and Matrix abilities of Craft, which are both pretty unique differentiators.
+
+### Relations
+
+The concept of relations is simple: there is an "entries" field type, which you can assign to any entry, and add as many entries to it as you'd like. It works very similarly to adding assets to an entry.
+
+You can limit the number of related entries, limit the section type of related entries, etc.
+
+Let's see what this looks like by adding Related Projects to each portfolio entry.
+
+- In the _Portfolio_ fields group, I created a new field called _Related Projects_, set the _Field Type_ to _Entries_, and limited the source to _Portfolio_ entries.
+- After I saved the field, I added it as a field on _Portfolio_ section entries types.
+- Now, when you edit or add any Portfolio entry, you'll see a _Related Projects_ field that you can easily add any number of entries to.
+- Outputting these  related entries is incredibly easy. In our `/templates/portfolio/_entry.html` template, we just added the following:
+
+```
+{% for project in entry.relatedProjects.find() %}
+
+  <section class="box">
+    {% set image = project.portfolioImages.first() %}
+    <a href="{{ entry.url }}" class="image image-full"><img src="{{ image.getUrl('portfolioEntry') }}" alt="" /></a>
+    <header>
+      <h3>{{ project.title }}</h3>
+    </header>
+    <p>{{ project.body }}</p>
+    <footer>
+      <a href="{{ entry.url }}" class="button alt">View Project</a>
+    </footer>
+  </section>
+  
+{% endfor %}
+```
+
+### Matrix
+
+Matrix is the single most unique feature of Craft as a CMS. It's one of those things that takes a bit to wrap your head around, but once you realize what it is capable of it opens up entirely new doors for content generation, particularly for editorial style mixed content.
+
+For the purposes of this demo, let's say for each extended project description we wanted to include any of the following:
+
+- Copy
+- Quotes
+- List of Related Projects
+
+Let's also say we want to be able to include each of those in any quantity, in any order, and make it all easily editable by a client with no risk of them breaking anything.
+
+- First, we'll need to create  Matrix field for our portfolio entries.
+- When the _Field Type_ is set to Matrix, we see a new area for Configuring the Matrix.
+- A block type is just a type of content, in our case: Copy, Quote, or Paragraph
+- We need to create a new block type for each of these. You can think of each Block type as a mini entry, which can then include any number of fields.
+- Once we've created the matrix field and added it to the section entry type, we can edit any of our portfolio entries and see our new _Extended Description_ matrix. We can add any number of blocks, and set their order.
+- Using the matrix in our markup is pretty easy. We just loop over the matrix blocks just like we would loop over relations:
+
+```
+{% for block in entry.extendedDescription %}
+  {% if block.type == "copy" %}
+
+    <p>{{ block.copyContent }}</p>
+
+  {% elseif block.type == "quote" %}
+
+    <p class="quote">{{ block.quoteContent }}</p>
+
+  {% elseif block.type == "relatedProjects" %}
+    
+    <div class="extended-description-projects">
+      {% for project in block.projectsContent.find() %}
+        <a href="{{ project.url }}" class="extended-description-project">
+          {% set image = project.portfolioImages.first() %}
+          <img src="{{ image.getUrl('portfolioEntry') }}" alt="" />
+          <h3>{{ project.title }}</h3>
+        </a>
+      {% endfor %}
+    </div>
+
+  {% endif %}
+{% endfor %}
+```
