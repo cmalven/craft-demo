@@ -114,3 +114,20 @@ Let's talk about each of things things individually real quick:
 - Go back to [Settings > Sections > News > Edit Entry Types](http://dev.craft-demo.com/admin/settings/sections/2/entrytypes/2) and we'll see a new `Location` field under `Default`. Just drag it up to our Field Layout, and click `Save`.
 - Now if we go to `Entries` and edit one of our News entries, we'll see our new `location` field ready to use.
 - To output this, we'd just add an `{{ entry.location }}` tag to any of our News templates.
+
+
+## 03: Getting ready to build out a static site.
+
+To save time, I've done a few things behind the scenes since we last left-off:
+
+- Copies a bunch of template files into `/styles`, `/scripts`, `/images`, and `/craft/templates`.
+- Created a `/templates/includes` folder to break up the markup a little bit.
+- If we take a look at our new `/craft/templates/_layout.html`, we see that its now a super simple file with a bunch of includes. These includes work pretty much as you expect. It's also possible to pass local variables into an include, similarly to how to passed variables _up_ to the layout template.
+- We also deleted all traces of the previous `News` section, including templates.
+
+## 04: Building out the homepage entry.
+
+Now let's start thinking about how we'd convert this static template over to Craft.
+
+- We already have the `siteName` being pulled in. That's good.
+- We have a this big title block, which includes
