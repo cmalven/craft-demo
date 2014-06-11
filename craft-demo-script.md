@@ -20,7 +20,7 @@ Completely fresh, untouched Craft Download.
 - Briefly explain how the default Craft folder structure works, and the most common way to prep it for development.
 - Move contents of `/public` folder into root.
 - Open `index.php` and change `$craftPath = '../craft';` to `$craftPath = 'craft';`
-- Open `/craft/config/general.php` and add `omitScriptNameInUrls' => true` to the array.
+- Open `/craft/config/general.php` and add `'omitScriptNameInUrls' => true` to the array.
 - Rename `htaccess` to `.htaccess`. Combined with the above, this will remove `index.php` from URLs.
 
 
